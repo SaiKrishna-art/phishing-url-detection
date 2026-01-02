@@ -33,13 +33,25 @@ function App() {
     setResult("");
 
     try {
-      const response = await fetch(`https://phishing-backend.onrender.com/check-url`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ url }),
-      });
+    const response = await fetch(`${API_BASE_URL}/check-url`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ url }),
+    });
+  
+    if (!response.ok) {
+      throw new Error("Request failed");
+    }
+  
+    const data = await response.json();
+    setResult(data.decision);
+  
+  } catch (err) {
+    setError("Backend not reachable");
+  }
+  
 
       const data = await response.json();
 

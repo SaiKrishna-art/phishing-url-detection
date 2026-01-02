@@ -3,7 +3,7 @@ from pydantic import BaseModel
 import pickle
 from features import extract_features
 from fastapi.middleware.cors import CORSMiddleware
-
+import os
 
 app = FastAPI(title="phishing URL detection API")
 
@@ -17,8 +17,12 @@ app.add_middleware(
 class URLRequest(BaseModel):
     url: str
 
-with open("model.pkl", "rb") as f:
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "model.pkl")
+
+with open(MODEL_PATH, "rb") as f:
     phishing_model = pickle.load(f)
+
 
 @app.get("/")
 def health_check():

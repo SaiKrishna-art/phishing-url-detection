@@ -33,7 +33,7 @@ function App() {
     setResult("");
 
     try {
-      const response = await fetch(`${API_BASE_URL}/check-url`, {
+      const response = await fetch(`https://phishing-backend.onrender.com/check-url`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

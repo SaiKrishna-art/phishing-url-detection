@@ -18,7 +18,7 @@ class URLRequest(BaseModel):
     url: str
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "model.pkl")
+MODEL_PATH = os.path.join(BASE_DIR, "random_forest_model.pkl")
 
 with open(MODEL_PATH, "rb") as f:
     phishing_model = pickle.load(f)

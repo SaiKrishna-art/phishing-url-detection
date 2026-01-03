@@ -156,7 +156,7 @@ function Home() {
           textAlign: "center",
           fontSize: "14px",
           color: "#666",
-          position: "absolute",
+          position: "fixed",
           bottom: 0,
           left: 0,
           width: "100%",

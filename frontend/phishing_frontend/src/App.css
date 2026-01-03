@@ -56,6 +56,121 @@ input{
   position: absolute;
   top: 20px;
   left: 50%;
+  bottom: auto;
   /* right: 50%; */
   transform: translateX(-50%);
+  margin-bottom: 50px;
+}
+.nav-container{
+  background-color: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  position: absolute;
+  top: 10px;
+  left: 90%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  margin-bottom: 20px;
+}
+/* Page background */
+.about-page {
+  min-height: 100vh;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 150px 20px;
+  padding-bottom: 60px;
+  top: 20px;
+}
+
+/* Main content box */
+.about-container {
+  max-width: 800px;
+  width: 100%;
+  top: 20px;
+}
+
+/* Intro text */
+.about-intro {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  color: #cccccc;
+  margin-top: 50px;
+}
+
+/* Section blocks */
+.about-section {
+  margin-bottom: 50px;
+  padding: 25px;
+  background: #2a2a2a;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Section titles */
+.about-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #ffffff;
+  top: 20%;
+}
+
+/* Lists */
+.about-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-section li {
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: #dddddd;
+}
+/* Hidden by default */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-in-out;
+}
+
+/* When visible */
+.reveal.active {
+  opacity: 5;
+  transform: translateY(0);
+}
+
+.contactme-section ul{
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.contactme-section li{
+  display: flex;
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: #dddddd;
+  list-style-type: none;
+  padding-left: 0;
+  justify-content: center;   /* horizontal center */
+  align-items: center;  
+}
+
+
+.contactme-section a:hover {
+  text-decoration: underline;
+}
+
+.black-box{
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 7px 14px 40px 14px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.alignment{
+  justify-content: center;   /* horizontal center */
+  align-items: center;  
 }
